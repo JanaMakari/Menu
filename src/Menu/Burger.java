@@ -17,5 +17,15 @@ public class Burger extends Food
     public String toString() {
         return "Burger "+super.toString();
     }
-
+    public String getFoodDescription()
+    {
+        try
+        {
+            return this.getId()+" - "+this.getName()+"\t$"+this.getPrice()+"\n"+this.getIngredientsdescription()+"\n";
+        }
+        catch(NullPointerException e)
+        {
+            return "Empty\n";
+        }
+    }
 }
