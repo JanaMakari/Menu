@@ -18,4 +18,15 @@ public class Sides extends Food
     public String toString() {
         return "Sides{" + "sauce=" + sauce + '}';
     }
+    public String getFoodDescription()
+    {
+        try
+        {
+            return this.getId()+" - "+this.getName()+"\t$"+this.getPrice()+"\n"+this.getIngredientsdescription()+"\n";
+        }
+        catch(NullPointerException e)
+        {
+            return "Empty\n";
+        }
+    }
 }
