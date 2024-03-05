@@ -19,5 +19,16 @@ public class Drink extends Food
     public String toString() {
         return "Drink "+super.toString();
     }
+    public String getFoodDescription()
+    {
+        try
+        {
+            return this.getId()+" - "+this.getName()+"\t$"+this.getPrice()+"\n";
+        }
+        catch(NullPointerException e)
+        {
+            return "Empty\n";
+        }
+    }
     
 }
