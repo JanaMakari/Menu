@@ -4,7 +4,7 @@
  */
 package Menu;
 
-public class Food {
+public abstract class Food {
     //
     private String name;
     private String id;
@@ -34,18 +34,8 @@ public class Food {
     }
     //
     
-    //Method returns Food ID - Name - Price
-    public String getFoodDescription()
-    {
-        try
-        {
-            return this.id+" - "+this.name+"\t$"+this.price+"\n"+this.getIngredientsdescription()+"\n";
-        }
-        catch(NullPointerException e)
-        {
-            return "Empty\n";
-        }
-    }
+    //
+    public abstract String getFoodDescription();
     //
 
     //
